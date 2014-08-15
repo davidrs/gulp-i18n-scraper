@@ -35,15 +35,19 @@ function gulpPrefixer(selectorText) {
 
     //it goes through here, cause we use concat can't do streams.
     if (file.isBuffer()) {
-      console.log('processing file ', file.path);
+      //console.log('processing file ', file.path);
 
       $ = cheerio.load(file.contents.toString('utf8'));//'<p>file</p>');
       var str = '';
       $(selectorText).each(function(){
         var txt = $(this).text();
         var data = $(this).data('i18n');
-        str += '"' + txt + '": "' + data + '",';
-        console.log('txt', txt, data);
+
+        //only print if not dynamic.
+        if(data.indexOf('<%=') < 0){
+          str += '"' + data + '": "' + txt + '",\n';
+        }
+        //console.log('txt', txt, data);
       });
       file.contents = new Buffer(str);
     }

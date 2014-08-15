@@ -3,7 +3,7 @@ gulp-i18n-scraper
 
 Scrapes template files for i18n keys and returns them and their values.
 
-pass in the vale you want to scrape for:` "*[data-i18n^='amp.']" `
+pass in the value you want to scrape for:` "*[data-i18n^='amp.']" `
 
 
 Currently only supports buffers, not streams!
