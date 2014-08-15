@@ -1,0 +1,18 @@
+{
+  "name": "gulp-i18n-scraper",
+  "version": "0.0.1",
+  "description": "Scrapes template files for i18n data attributes and returns keys and values.",
+  "repository": "git://github.com/davidrs/gulp-i18n-scraper",
+  "main": "gulp-i18n-scraper.js",
+  "scripts": {
+    "test": "echo 'Testing not yet configured...'"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "through2": "*",
+    "cheerio": "*",
+    "underscore": "^1.6.0",
+    "gulp-util": "^2.2.16",
+    "gulp": "^3.7.0"
+  }
+}
